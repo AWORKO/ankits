@@ -1,0 +1,52 @@
+Cluster Creation steps:
+
+1. Login to http://HOST_PUBLIC_IP:8080 (admin/admin)
+￼
+2. Click on “Launch Install Wizard”
+￼
+3. Enter the cluster name and click Next button
+￼
+4. In Use Public Repository, Remove unwanted OS details. Keep redhat7 only. Click Next
+
+After removing OS details, it should look like this:
+￼
+5. Enter hostnames in Target Hosts. One in a line.
+￼
+6. Under Host Registration Information, You have 2 options.
+    1. Copy the contents of AEPAWSKeyPair.pem in the text box below.
+    2. Click on Choose file button and locate the file(AEPAWSKeyPair.pem) from your local machine.
+￼
+7. Change the user from root to centos under SSH User Account.
+￼
+8. Click on Register and Confirm → to continue ahead.
+9. Here you will need to wait until the Next button becomes Enabled. Do add a check for the Status to be Success.
+￼
+￼
+10. Initially all the services will be enabled. 
+￼
+
+11. Remove unwanted services and select only HDFS, YARN + MapReduce2, ZooKeeper, Ambari Metrics and click Next
+￼
+12. In the next appeared window, We don’t need to change anything. Click Next
+￼
+13. Here DataNode and NodeManager Radio buttons for the second host are not selected.
+￼
+14. Select it and click Next :) :D
+￼
+15. Under Customize Services section, Let go further down.
+16. Click on HDFS -> Advanced Tab
+17. There is a property Block replication, Change the value from 3 to 2
+18. Now Click on YARN tab, Here in YARN Memory, we need to increase the Memory limit to 28 GB.(See how we can do it)
+￼
+19. Now in Ambari Metrices tab We need to set password for property Grafana Admin Password. Set it to admin/admin
+￼
+20. Now in SmartSense tab go to Activity Analysis, set password  admin/admin. Click Next button.
+￼
+21. Click on deploy button here. See if we can somehow add some verification step here??
+￼
+22. Might need to add some wait here as it takes some time to get completed.
+￼
+23. Once the installation is done the Next button will be enabled.
+￼
+24. That is it!!! The cluster creation is done. Just click on Complete button now.
+￼
