@@ -13,8 +13,8 @@ After removing OS details, it should look like this:
 5. Enter hostnames in Target Hosts. One in a line.
 ￼
 6. Under Host Registration Information, You have 2 options.
-    1. Copy the contents of AEPAWSKeyPair.pem in the text box below.
-    2. Click on Choose file button and locate the file(AEPAWSKeyPair.pem) from your local machine.
+    1. Copy the contents of SSH.pem in the text box below.
+    2. Click on Choose file button and locate the file(SSH.pem) from your local machine.
 ￼
 7. Change the user from root to centos under SSH User Account.
 ￼
